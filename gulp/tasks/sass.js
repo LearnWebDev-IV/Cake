@@ -1,6 +1,6 @@
 module.exports = function () {
     t.gulp.task('sass', function() {
-        return t.gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css', 'assets/css/**/*.scss'])
+        return t.gulp.src(['assets/css/**/*.scss'])
             .pipe(t.glp.sourcemaps.init())
             .pipe(t.glp.sass({
                 'include css':true
