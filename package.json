@@ -1,5 +1,5 @@
 {
-  "name": "cake",
+  "name": "Cake",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,25 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/LearnWebDev-IV/Cake.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LearnWebDev-IV/Cake/issues"
   },
   "homepage": "https://github.com/LearnWebDev-IV/Cake#readme",
-  "dependencies": {
-    "gulp": "^4.0.2"
-  },
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-changed": "^3.2.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-uglify": "^3.0.2"
   }
 }
