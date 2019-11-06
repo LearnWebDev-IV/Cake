@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header__container {
+  display: grid;
+  grid-template-areas: 'headerLogo headerContacts' 'headerNav headerNav';
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 50px 100px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #dcdcdc;
+  background-image: url('../img/logo.svg');
+}
+.header__logo {
+  grid-area: headerLogo;
+}
+.nav {
+  background-color: deeppink;
+}
+.header__nav {
+  grid-area: headerNav;
+}
+.header__contacts {
+  background-color: lightpink;
+  grid-area: headerContacts;
+}
