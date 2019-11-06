@@ -5,6 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const babel = require('gulp-babel');
 
 const cssFiles = [
   './src/static/css/main.css'
@@ -12,6 +13,10 @@ const cssFiles = [
 
 const jsFiles = [
   './src/controllers/main.js'
+];
+
+const imageFiles = [
+    './src/static/img/*'
 ];
 
 function styles() {
@@ -31,11 +36,20 @@ function styles() {
 function scripts() {
   return gulp.src(jsFiles)
     .pipe(concat('scripts.js'))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
     .pipe(uglify({
       toplevel: true
     }))
     .pipe(gulp.dest('./public/controllers'))
     .pipe(browserSync.stream());
+}
+
+function images() {
+    return gulp.src(imageFiles)
+        .pipe(gulp.dest('./public/static/img'))
+        .pipe(browserSync.stream());
 }
 
 function clean() {
@@ -58,5 +72,5 @@ gulp.task('scripts', scripts);
 gulp.task('del', clean);
 gulp.task('watch', watch);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, images)));
 gulp.task('dev', gulp.series('build', 'watch'));
