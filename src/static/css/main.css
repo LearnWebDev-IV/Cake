@@ -1,6 +1,27 @@
+/* Общие стили */
 * {
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 300px 1fr 300px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* Стили хедера */
+.header {
+  background: #ffb6c1;
 }
 
 .header__container {
@@ -9,6 +30,7 @@
   grid-template-columns: 100px 1fr;
   grid-template-rows: 50px 100px;
 }
+
 .logo {
   width: 100px;
   height: 100px;
@@ -27,4 +49,40 @@
 .header__contacts {
   background-color: lightpink;
   grid-area: headerContacts;
+}
+
+/* Стили футера */
+.footer {
+  background: deeppink;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-areas: 'contactsBox footerSubscribe'
+                       'footerCopy  footerCopy';
+  grid-template-rows: 8fr 2fr;
+}
+
+.footer__contacts-box {
+  grid-area: contactsBox;
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+}
+
+.footer__contacts {
+  background: aqua;
+}
+
+.footer__social {
+  background: cornflowerblue;
+}
+
+.footer__subscribe {
+  grid-area: footerSubscribe;
+  background: chartreuse;
+}
+
+.footer__copy {
+  grid-area: footerCopy;
+  background: darkorange;
 }
