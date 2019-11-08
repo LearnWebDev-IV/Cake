@@ -52,6 +52,30 @@ body {
 }
 
 /* Стили футера */
+.utp__container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+  box-sizing: border-box;
+}
+
+.utp__items {
+  display: flex;
+  flex-direction: row;
+}
+
+.utp__item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+}
+
+.utp__img {
+  width: 100px;
+}
+
+
+/* Стили футера */
 .footer {
   background: deeppink;
 }
